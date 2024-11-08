@@ -25,9 +25,14 @@ public class HelloServlet extends HttpServlet {
         user1.setProfission("DEV");
 
         Gson gson = new Gson();
+
         String response = gson.toJson(user1);
 
+        UsuarioTeste user2 = gson.fromJson(response, UsuarioTeste.class);
+
         printWriter.println(response);
+
+        printWriter.println(user2.toString());
     }
 
 }
