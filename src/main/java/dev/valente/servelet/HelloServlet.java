@@ -2,6 +2,7 @@ package dev.valente.servelet;
 
 import com.google.gson.Gson;
 import dev.valente.model.UsuarioTeste;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -34,5 +35,6 @@ public class HelloServlet extends HttpServlet {
 
         printWriter.println(user2.toString());
     }
+
 
 }

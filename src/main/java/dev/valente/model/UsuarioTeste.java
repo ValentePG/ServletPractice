@@ -13,6 +13,15 @@ public class UsuarioTeste {
         this.name = name;
     }
 
+    public UsuarioTeste(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
+
+    public UsuarioTeste() {
+    }
+
     @Override
     public String toString() {
         return "UsuarioTeste{" +
