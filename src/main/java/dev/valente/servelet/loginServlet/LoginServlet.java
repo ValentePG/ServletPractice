@@ -17,8 +17,7 @@ public class LoginServlet extends HttpServlet {
 
         Gson gson = new Gson();
 
-        // Podemos fazer desta forma também, provavelmente é melhor! ******
-
+        // AGORA JA N SEI QUAL É A MELHOR
         //      InputStream inputStream = req.getInputStream();
         //
         //        byte[] bytes = new byte[1024];
@@ -30,8 +29,21 @@ public class LoginServlet extends HttpServlet {
         //            stringBuilder.append(new String(bytes, 0, bytesRead));
         //        }
         //        inputStream.close();
-
         // String msgDecode = stringBuilder.toString();
+
+
+        /////////////////////////////////////////////////
+
+        // TALVEZ SEJA A MELHOR MANEIRA
+
+        // BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        // String linha = "";
+        // StringBuilder str = new StringBuilder();
+        // while((linha = br.readLine()) != null) {
+        //    str.append(linha);
+        // }
+
+        //////////////////////////////////////////////////
 
         // transforma o json em vetor de byte
         byte[] bytes = req.getInputStream().readAllBytes();
