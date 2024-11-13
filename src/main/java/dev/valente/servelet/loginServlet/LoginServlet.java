@@ -17,27 +17,25 @@ public class LoginServlet extends HttpServlet {
 
         Gson gson = new Gson();
 
-//        InputStream inputStream = req.getInputStream();
-//        FileOutputStream arquivo = new FileOutputStream(caminhodearquivo);
-//
-//        byte[] bytes1 = new byte[1024];
-//
-//        while(inputStream.available()>0){
-//            inputStream.read(bytes1);
-//            arquivo.write(bytes1);
-//        }
-//        inputStream.close();
-//        arquivo.close();
+        // Podemos fazer desta forma também, provavelmente é melhor! ******
 
-        // InputStream inputStream = req.getInputStream();
-        // byte[] bytes = new byte[1024];
-        // StringBuilder stringBuilder = new StringBuilder();
-        // while(inputStream.available()>0){ inputStream.read(bytes);
-        // stringBuilder.append(bytes);
-        // }
+        //      InputStream inputStream = req.getInputStream();
+        //
+        //        byte[] bytes = new byte[1024];
+        //        StringBuilder stringBuilder = new StringBuilder();
+        //        int bytesRead;
+        //
+        //        while((bytesRead = inputStream.read(bytes)) != -1){
+        //
+        //            stringBuilder.append(new String(bytes, 0, bytesRead));
+        //        }
+        //        inputStream.close();
+
+        // String msgDecode = stringBuilder.toString();
 
         // transforma o json em vetor de byte
         byte[] bytes = req.getInputStream().readAllBytes();
+
 
         // Tenta transformar os bytes em String
         String msgDecode = new String(bytes);
